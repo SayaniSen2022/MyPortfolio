@@ -1,0 +1,161 @@
+/*color scheme:
+#0b0c10;#5eead4;#e4e4e7
+Can be used: #1f2833 #66fcf1 #45a29e
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway";
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+.main-nav {
+  width: 100%;
+  height: 3em;
+  display: grid;
+  grid-template-columns: 6em 2fr 1fr 3em;
+  /* background-color: #0b0c10; */
+  /* box-shadow: 3px 8px 30px #2e151b inset; */
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("./bgimage4.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  position: sticky;
+  top: 0;
+}
+.menu-link {
+  grid-column: 2/3;
+}
+.menu-link ul {
+  height: 3em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.menu-link ul li {
+  text-transform: capitalize;
+  margin-right: 3em;
+}
+.menu-link ul li a:hover {
+  color: #5eead4;
+}
+.social-media {
+  grid-column: 3/4;
+}
+.social-media ul {
+  height: 3em;
+  display: grid;
+  grid-template-columns: 3fr repeat(3, 1fr);
+  align-items: center;
+}
+.social-media ul li {
+  text-align: right;
+}
+
+.social-media ul li:first-child {
+  grid-column: 2/3;
+}
+/*grid ends*/
+.twitter {
+  color: #e4e4e7;
+}
+.twitter:hover {
+  color: #5eead4;
+}
+.github {
+  color: #e4e4e7;
+}
+.github:hover {
+  color: #5eead4;
+}
+.linkedin {
+  color: #e4e4e7;
+}
+.linkedin:hover {
+  color: #5eead4;
+}
+
+.social-media .hamburger-menu {
+  display: none;
+  color: #e4e4e7;
+}
+/*responsive CSS style*/
+@media (max-width: 998px) {
+  .main-nav {
+    height: 7rem;
+    grid-template-columns: 2rem 3fr 2rem 2rem;
+  }
+
+  .menu-link {
+    display: none;
+  }
+
+  .social-media ul {
+    height: 7rem;
+  }
+
+  .mobile-menu-link {
+    grid-column: 2/4;
+    position: relative;
+    z-index: 99;
+  }
+
+  .mobile-menu-link {
+    background-color: #0b0c10;
+    height: 20rem;
+    display: grid;
+    grid-column: 2/5;
+    align-items: center;
+    padding-left: 3rem;
+    transition: all 2s linear;
+    transform-origin: top;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+
+  .mobile-menu-link ul {
+    height: 20rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .mobile-menu-link ul li:first-child {
+    transition-delay: 0.2s;
+  }
+
+  .social-media {
+    grid-row: 1/2;
+    grid-column: 3/5;
+    justify-items: end;
+    align-items: center;
+    transition: all 2s linear;
+  }
+
+  .social-media .social-media-desktop {
+    height: 0;
+    display: none;
+  }
+
+  .social-media {
+    height: 7rem;
+    display: flex;
+    justify-self: end;
+    align-items: center;
+  }
+
+  .social-media .hamburger-menu {
+    display: block;
+    font-size: 2.5rem;
+  }
+}
