@@ -30,6 +30,7 @@ li {
   background-attachment: fixed;
   background-size: cover;
   position: sticky;
+  z-index: 1;
   top: 0;
 }
 .menu-link {

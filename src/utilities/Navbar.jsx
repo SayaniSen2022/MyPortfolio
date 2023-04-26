@@ -6,6 +6,7 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+
   return (
     <>
       <nav className="main-nav">
@@ -28,17 +29,7 @@ const Navbar = () => {
                   return isActive ? "text-teal-300" : "text-zinc-200";
                 }}
               >
-                about
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/projects"
-                className={({ isActive }) => {
-                  return isActive ? "text-teal-300" : "text-zinc-200";
-                }}
-              >
-                Projects
+                About
               </NavLink>
             </li>
           </ul>

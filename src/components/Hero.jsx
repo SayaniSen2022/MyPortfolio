@@ -1,15 +1,19 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import { Avatar, Button, Stack, VStack, Heading, Link } from "@chakra-ui/react";
+import React, { useRef } from "react";
+// import { useNavigate } from "react-router-dom";
+import { Button, Stack, VStack, Heading, Link } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import "./Hero.css";
-import About from "./About";
 import Projects from "./Projects";
 
 const Hero = () => {
-  const navigate = useNavigate();
-  const navigateToProjects = () => {
-    navigate("/projects");
+  // const navigate = useNavigate();
+  // const navigateToProjects = () => {
+  //   navigate("/projects");
+  // };
+  const workRef = useRef(null);
+
+  const handleClick = () => {
+    workRef.current?.scrollIntoView({ behavior: "smooth" });
   };
   return (
     <>
@@ -24,16 +28,15 @@ const Hero = () => {
             colorScheme="teal"
             variant="outline"
             mb="2"
-            onClick={navigateToProjects}
+            onClick={handleClick}
           >
             View my work
             <ArrowForwardIcon />
           </Button>
         </VStack>
       </Stack>
-      <About />
-      <Projects />
-      <footer>Copyright myfolio.inc 2023</footer>
+
+      <Projects ref={workRef} />
     </>
   );
 };
