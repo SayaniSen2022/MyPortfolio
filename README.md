@@ -1,2 +1,2 @@
 #WIP
-# MyPortfolio is a portfolio website. I have used React JS, HTML, CSS, ChakraUI & tailwind in the process of development.
+It is a portfolio website. Technologies used: React JS, HTML, CSS, ChakraUI & Tailwind.
