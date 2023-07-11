@@ -2,13 +2,10 @@ import React from "react";
 import { Heading, Text, Grid, GridItem, Button, Link } from "@chakra-ui/react";
 import "./About.css";
 import { ArrowDownIcon } from "@chakra-ui/icons";
-import { Icon } from "@chakra-ui/react";
-import { DiHtml5, DiCss3Full } from "react-icons/di";
 
 const RESUME_URL = "./MyResume.pdf";
 
 const About = () => {
-  //resume download button logic
   const downloadAtUrl = (url) => {
     const fileName = "SayaniSenResume";
     const aTag = document.createElement("a");
@@ -22,40 +19,56 @@ const About = () => {
     <>
       <div className="structure">
         <section className="section-one">
-          <Heading my="2" size="md">
+          <Heading my="2" size="md" color="blue.200">
             About Me
           </Heading>
-          <Text lineHeight="6" fontSize="xl">
-            Hello, I am Sayani Sen, a web developer based in India. My main
-            interest lies in front-end web development. I create beautiful,
-            responsive and user- friendly interfaces.
+          <Text lineHeight="8" fontSize="xl">
+            Hello, I am Sayani, a frontend web developer based in India.
             <p>
-              Though I started my career in the field of finance I have decided
-              to switch since the amalgamation of creativity and logic attracted
-              me immensely and I chose to answer that call.
+              I've been a finance professional at the beginning of my career but
+              I am seeking a switch to the web development industry. I am
+              primarily focused on frontend development.
+            </p>
+            The concept of combining creativity with logic was the prime factor
+            which intrigued me about the industry. Over time I have learnt
+            various relevant modern technologies and my projects are capable of
+            demonstrating my coding proficiency.
+            <p>
+              As I transition from finance to software dveelopment I am hoping
+              to combine the perspective earned from my previous industry and
+              combine it with tech to turn beautiful ideas into working
+              realities.
             </p>
             <p>
-              Looking forward to build a successful career in the field of web
-              development and hoping to come in help for many organisations in
-              efficiently turning innovative ideas into beautiful technical
+              Let's connect and turn innovative ideas into beautiful digital
               solutions.
             </p>
           </Text>
         </section>
         <section className="section-two">
-          <Heading my="2" size="md">
+          <Heading my="2" size="md" color="blue.200">
             My Skills
           </Heading>
           <Grid templateColumns="repeat(7, 1fr)">
-            <GridItem w="80%" h="10" bg="white" color="blue.900">
+            <GridItem
+              w="80%"
+              h="10"
+              bg="black"
+              color="blue.200"
+              borderRadius="xl"
+            >
               <Text my="2" textAlign="center">
-                <Icon as={DiHtml5} style={{ color: "#e34f26" }} />
                 HTML
               </Text>
             </GridItem>
-            <GridItem w="80%" h="10" bg="white" color="blue.900">
+            <GridItem
+              w="80%"
+              h="10"
+              bg="black"
+              color="blue.200"
+              borderRadius="xl"
+            >
               <Text my="2" textAlign="center">
-                <Icon as={DiCss3Full} style={{ color: "#264de4" }} />
                 CSS
               </Text>
             </GridItem>
