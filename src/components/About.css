@@ -1,0 +1,17 @@
+.structure {
+  display: flex;
+  flex-direction: row;
+}
+.section-one {
+  width: 50%;
+  margin-left: 2em;
+}
+.section-two {
+  margin-left: 2em;
+  margin-right: 2em;
+  width: 50%;
+}
+.buttons {
+  margin-top: 18%;
+  margin-left: 37%;
+}

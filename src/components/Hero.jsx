@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 // import { useNavigate } from "react-router-dom";
-import { Button, Stack, VStack, Heading, Link } from "@chakra-ui/react";
+import { Button, Stack, VStack, Text, Link } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import "./Hero.css";
 import Projects from "./Projects";
@@ -19,15 +19,22 @@ const Hero = () => {
     <>
       <Stack height="100vh" className="hero-section">
         <VStack className="intro">
-          <Heading fontSize="3xl" fontWeight="medium" color="white">
-            Hello, I'm Sayani Sen. I'm a front-end web developer.
-          </Heading>
+          <Text
+            fontSize="6xl"
+            fontWeight="medium"
+            color="white"
+            textAlign="center"
+          >
+            Hello, I'm <span style={{ color: "#FF3659" }}>Sayani</span>. I'm a
+            front-end web developer. Come, let's explore!
+          </Text>
         </VStack>
         <VStack>
           <Button
-            colorScheme="teal"
+            color="#76E4F7"
+            borderColor="#76E4F7"
             variant="outline"
-            mb="2"
+            my="2"
             onClick={handleClick}
           >
             View my work

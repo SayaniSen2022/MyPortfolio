@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import Error from "./components/Error";
 import About from "./components/About";
 import Projects from "./components/Projects";
+import Blogs from "./components/Blogs";
 
 function App() {
   return (
