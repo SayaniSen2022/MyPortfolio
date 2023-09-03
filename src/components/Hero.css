@@ -35,3 +35,15 @@
     transform: translateY(0);
   }
 }
+
+@media (max-width: 600px) {
+  .hero-section {
+    display: none;
+  }
+  .hero-mobile {
+    background-image: linear-gradient(to left, black, blue);
+  }
+  .arrow {
+    margin: 2rem 0 1rem 10rem;
+  }
+}
