@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
+
 .hero-section {
   background-image: linear-gradient(to left, black, blue);
 }
@@ -10,7 +12,7 @@
 }
 .typed {
   letter-spacing: 5px;
-  font-family: monospace;
+  font-family: "Open Sans", sans-serif;
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
