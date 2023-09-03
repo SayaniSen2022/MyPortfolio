@@ -1,3 +1,7 @@
+.main-container {
+  background-image: linear-gradient(to left, black, blue);
+  padding: 0 0 2rem 0;
+}
 .container {
   position: relative;
   width: 100%;

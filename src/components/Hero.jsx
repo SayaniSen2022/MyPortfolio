@@ -20,7 +20,7 @@ const Hero = () => {
               <Heading
                 as="h1"
                 size="4xl"
-                my="10rem"
+                my="7rem"
                 ml="5rem"
                 lineHeight="initial"
               >
@@ -39,8 +39,6 @@ const Hero = () => {
             </IconContext.Provider>
           </div>
         </Stack>
-
-        <Projects ref={workRef} />
       </div>
       <div className="hero-mobile">
         <Stack>
@@ -66,8 +64,8 @@ const Hero = () => {
             </IconContext.Provider>
           </div>
         </Stack>
-        <Projects ref={workRef} />
       </div>
+      <Projects ref={workRef} />
     </>
   );
 };

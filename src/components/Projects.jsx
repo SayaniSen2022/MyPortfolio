@@ -13,8 +13,8 @@ import {
 
 const Projects = forwardRef((props, ref) => {
   return (
-    <div ref={ref}>
-      <SimpleGrid columns={3} spacing={4} py="5" ml="9">
+    <div ref={ref} className="main-container">
+      <SimpleGrid columns={3} spacing={4} pt="5rem" ml="9">
         <Card align="center" maxW="sm" backgroundColor="gray.200">
           <CardBody>
             <div className="container">
