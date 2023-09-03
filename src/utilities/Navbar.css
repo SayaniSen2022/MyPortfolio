@@ -22,11 +22,7 @@ li {
   grid-template-columns: 6em 2fr 1fr 3em;
   /* background-color: #0b0c10; */
   /* box-shadow: 3px 8px 30px #2e151b inset; */
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0.3)
-    ),
-    url("./bgimage4.jpg");
+  background-image: linear-gradient(to right, black, blue);
   background-attachment: fixed;
   background-size: cover;
   position: sticky;

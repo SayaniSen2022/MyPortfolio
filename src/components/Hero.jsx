@@ -1,50 +1,40 @@
 import React, { useRef } from "react";
-// import { useNavigate } from "react-router-dom";
-import { Button, Stack, VStack, Text, Link } from "@chakra-ui/react";
-import { ArrowForwardIcon } from "@chakra-ui/icons";
+import { Stack, HStack, Box, Heading, Text } from "@chakra-ui/react";
+import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import "./Hero.css";
 import Projects from "./Projects";
+import { IconContext } from "react-icons";
 
 const Hero = () => {
-  // const navigate = useNavigate();
-  // const navigateToProjects = () => {
-  //   navigate("/projects");
-  // };
   const workRef = useRef(null);
 
   const handleClick = () => {
     workRef.current?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <>
-      <Stack height="100vh" className="hero-section">
-        <VStack className="intro">
-          <Text
-            fontSize="6xl"
-            fontWeight="medium"
-            color="white"
-            textAlign="center"
-          >
-            Hello, I'm <span style={{ color: "#FF3659" }}>Sayani</span>. I'm a
-            front-end web developer. Come, let's explore!
-          </Text>
-        </VStack>
-        <VStack>
-          <Button
-            color="#76E4F7"
-            borderColor="#76E4F7"
-            variant="outline"
-            my="2"
-            onClick={handleClick}
-          >
-            View my work
-            <ArrowForwardIcon />
-          </Button>
-        </VStack>
+    <div className="hero-section">
+      <Stack>
+        <HStack>
+          <Box maxW="35rem">
+            <Heading as="h1" size="4xl" my="10rem" ml="5rem">
+              Get ideas turned into <Text className="typed">reality.</Text>
+            </Heading>
+          </Box>
+          <Box maxW="45rem">
+            <Heading as="h1" size="2xl" my="10rem" ml="5rem">
+              I'm Sayani. A front-end developer.
+            </Heading>
+          </Box>
+        </HStack>
+        <div id="explore-button">
+          <IconContext.Provider value={{ className: "arrow", size: 70 }}>
+            <MdKeyboardDoubleArrowDown onClick={handleClick} />
+          </IconContext.Provider>
+        </div>
       </Stack>
 
       <Projects ref={workRef} />
-    </>
+    </div>
   );
 };
 export default Hero;

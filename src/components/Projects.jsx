@@ -9,14 +9,12 @@ import {
   Card,
   Text,
   SimpleGrid,
-  Divider,
-  Center,
 } from "@chakra-ui/react";
 
 const Projects = forwardRef((props, ref) => {
   return (
     <div ref={ref}>
-      <SimpleGrid columns={3} spacing={4} my={3} ml={9}>
+      <SimpleGrid columns={3} spacing={4} py="5" ml="9">
         <Card align="center" maxW="sm" backgroundColor="gray.200">
           <CardBody>
             <div className="container">

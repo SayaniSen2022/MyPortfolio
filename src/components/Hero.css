@@ -1,9 +1,35 @@
 .hero-section {
-  background-image: url("./bgimage4.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center top;
+  background-image: linear-gradient(to left, black, blue);
 }
-.intro {
-  margin-top: 12em;
+#explore-button {
+  animation: animate 3s linear infinite;
+}
+.arrow {
+  color: white;
+  margin-left: 38rem;
+}
+.typed {
+  letter-spacing: 5px;
+  font-family: monospace;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(18);
+}
+/*typing effect*/
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes animate {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
