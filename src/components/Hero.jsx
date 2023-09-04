@@ -4,9 +4,15 @@ import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import "./Hero.css";
 import Projects from "./Projects";
 import { IconContext } from "react-icons";
+import ProjectMobi from "./ProjectMobi";
 
 const Hero = () => {
   const workRef = useRef(null);
+  const projectRef = useRef(null);
+
+  const handleClickMobi = () => {
+    projectRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const handleClick = () => {
     workRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -38,6 +44,7 @@ const Hero = () => {
               <MdKeyboardDoubleArrowDown onClick={handleClick} />
             </IconContext.Provider>
           </div>
+          <Projects ref={workRef} />
         </Stack>
       </div>
       <div className="hero-mobile">
@@ -60,12 +67,12 @@ const Hero = () => {
           </Box>
           <div id="explore-button">
             <IconContext.Provider value={{ className: "arrow", size: 70 }}>
-              <MdKeyboardDoubleArrowDown onClick={handleClick} />
+              <MdKeyboardDoubleArrowDown onClick={handleClickMobi} />
             </IconContext.Provider>
           </div>
         </Stack>
       </div>
-      <Projects ref={workRef} />
+      <ProjectMobi ref={projectRef} />
     </>
   );
 };
