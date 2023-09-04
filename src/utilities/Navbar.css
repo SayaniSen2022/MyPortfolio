@@ -8,7 +8,7 @@
   height: 3em;
   display: grid;
   grid-template-columns: 6em 2fr 1fr 3em;
-  background-color: #a0e7e5;
+  background-image: linear-gradient(to left, black, blue);
   position: sticky;
   z-index: 1;
   top: 0;
@@ -41,7 +41,7 @@ li {
   grid-column: 3/4;
 }
 .hamburger-menu {
-  color: blue;
+  color: white;
   display: none;
 }
 
@@ -61,12 +61,12 @@ li {
   }
   .mobile-menu-link {
     z-index: 1;
-    background-color: #000f1f;
+    background-color: #042242;
     position: relative;
     left: 9.75rem;
     overflow-x: hidden;
     height: 10rem;
-    width: 15rem;
+    width: 11rem;
     display: grid;
     grid-column: 2/5;
     padding: 1rem 0 0 3rem;
