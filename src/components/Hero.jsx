@@ -71,8 +71,8 @@ const Hero = () => {
             </IconContext.Provider>
           </div>
         </Stack>
+        <ProjectMobi ref={projectRef} />
       </div>
-      <ProjectMobi ref={projectRef} />
     </>
   );
 };
