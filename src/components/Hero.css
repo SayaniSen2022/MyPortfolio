@@ -2,7 +2,6 @@
 
 .hero-section {
   background-image: linear-gradient(to left, black, blue);
-  height: 100vh;
 }
 #explore-button {
   animation: animate 3s linear infinite;

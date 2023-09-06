@@ -44,8 +44,8 @@ const Hero = () => {
               <MdKeyboardDoubleArrowDown onClick={handleClick} />
             </IconContext.Provider>
           </div>
-          <Projects ref={workRef} />
         </Stack>
+        <Projects ref={workRef} />
       </div>
       <div className="hero-mobile">
         <Stack>

@@ -1,13 +1,10 @@
 .footer-section {
-  height: 65px;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 1rem;
+  height: 5rem;
   text-align: center;
   background-color: black;
-  color: wheat;
-}
-.footer-content {
-  display: flex;
-  justify-content: center;
 }

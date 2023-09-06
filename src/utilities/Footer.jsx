@@ -1,12 +1,13 @@
 import React from "react";
+import { Box, Text } from "@chakra-ui/react";
 import "./Footer.css";
 
 const Footer = () => {
   return (
     <>
-      <footer className="footer-section">
-        <div className="footer-content">SayaniSen@2023</div>
-      </footer>
+      <Box className="footer-section" w="100%">
+        <Text>SayaniSen@2023</Text>
+      </Box>
     </>
   );
 };
