@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import "./Navbar.css";
-import { IconContext } from "react-icons";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -18,6 +17,7 @@ const Navbar = () => {
                 className={({ isActive }) => {
                   return isActive ? "text-orange-500" : "text-white";
                 }}
+                onClick={() => setShowMenu(!showMenu)}
               >
                 Home
               </NavLink>
@@ -28,6 +28,7 @@ const Navbar = () => {
                 className={({ isActive }) => {
                   return isActive ? "text-orange-500" : "text-white";
                 }}
+                onClick={() => setShowMenu(!showMenu)}
               >
                 About
               </NavLink>
