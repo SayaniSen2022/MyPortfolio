@@ -15,7 +15,7 @@ import { BiGitMerge } from "react-icons/bi";
 import { Icon } from "@chakra-ui/icons";
 import { ArrowDownIcon } from "@chakra-ui/icons";
 
-const RESUME_URL = "./Resume-SayaniSen.pdf";
+const RESUME_URL = "./Resume-Sayani Sen.pdf";
 
 const About = () => {
   const downloadAtUrl = (url) => {

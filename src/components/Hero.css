@@ -9,6 +9,7 @@
 .arrow {
   color: white;
   margin-left: 38rem;
+  cursor: pointer;
 }
 .typed {
   letter-spacing: 5px;

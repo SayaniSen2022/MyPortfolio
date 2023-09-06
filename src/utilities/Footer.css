@@ -1,10 +1,24 @@
 .footer-section {
   position: absolute;
   display: flex;
+  width: 100%;
   justify-content: flex-start;
-  margin: 0;
   padding: 1rem;
   height: 5rem;
   text-align: center;
+  color: #b2f5ea;
   background-color: black;
+}
+.social-icons {
+  cursor: pointer;
+}
+
+.twitter:hover {
+  color: #1d9bf0;
+}
+.linkedin:hover {
+  color: #0072b1;
+}
+.github:hover {
+  color: #808080;
 }
