@@ -9,6 +9,7 @@ import {
   CardFooter,
   Heading,
   Button,
+  Tag,
 } from "@chakra-ui/react";
 import "./Projects.css";
 
@@ -25,23 +26,30 @@ const ProjectMobi = forwardRef((props, ref) => {
             <Image
               objectFit="cover"
               maxW={{ base: "100%", sm: "200px" }}
-              src="./Cone.jpg"
+              src="./H-io.jpg"
               alt="Project 1"
             />
 
-            <Stack>
+            <Stack bgColor="gray.200" color="black">
               <CardBody>
-                <Heading size="md">The perfect latte</Heading>
+                <Heading size="md">Hypertensive.io</Heading>
 
                 <Text py="2">
-                  Caffè latte is a coffee beverage of Italian origin made with
-                  espresso and steamed milk.
+                  An open-source application that helps individuals to track and
+                  record their daily blood pressure data. One can log their
+                  readings, view the progress over time and also get statistical
+                  analysis.
                 </Text>
               </CardBody>
 
               <CardFooter>
-                <Button variant="solid" colorScheme="blue">
-                  Buy Latte
+                <Button variant="solid" colorScheme="purple">
+                  <a
+                    href="https://hypertensive-io.netlify.app/statistics"
+                    target="_blank"
+                  >
+                    Learn More
+                  </a>
                 </Button>
               </CardFooter>
             </Stack>
@@ -59,19 +67,28 @@ const ProjectMobi = forwardRef((props, ref) => {
               alt="LittleLemon"
             />
 
-            <Stack>
+            <Stack bgColor="gray.200" color="black">
               <CardBody>
-                <Heading size="md">The perfect latte</Heading>
+                <Heading size="md">Little Lemon Restaurant</Heading>
 
                 <Text py="2">
-                  Caffè latte is a coffee beverage of Italian origin made with
-                  espresso and steamed milk.
+                  Discover Little Lemon - a modern Mediterranean-inspired
+                  restaurant featuring locally-sourced ingredients and bold,
+                  refreshing flavors. Enjoy our signature lemon-infused dishes,
+                  fresh seafood, and grilled meats in a warm and inviting
+                  ambiance perfect for any occasion. Come savor the taste of the
+                  Mediterranean at Little Lemon today!
                 </Text>
               </CardBody>
 
               <CardFooter>
-                <Button variant="solid" colorScheme="blue">
-                  Buy Latte
+                <Button variant="solid" colorScheme="purple">
+                  <a
+                    href="https://github.com/SayaniSen2022/Capstone"
+                    target="_blank"
+                  >
+                    Learn More
+                  </a>
                 </Button>
               </CardFooter>
             </Stack>
@@ -85,25 +102,18 @@ const ProjectMobi = forwardRef((props, ref) => {
             <Image
               objectFit="cover"
               maxW={{ base: "100%", sm: "200px" }}
-              src="https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
-              alt="Project 1"
+              src="./CardThree.jpg"
+              alt="coming soon"
             />
 
             <Stack>
-              <CardBody>
-                <Heading size="md">The perfect latte</Heading>
+              <CardBody bgColor="gray.200" color="black">
+                <Heading size="md">United Engineering Works</Heading>
 
-                <Text py="2">
-                  Caffè latte is a coffee beverage of Italian origin made with
-                  espresso and steamed milk.
-                </Text>
+                <Tag bgColor="orange.400" color="white" py="2" mt="1">
+                  Coming Soon!
+                </Tag>
               </CardBody>
-
-              <CardFooter>
-                <Button variant="solid" colorScheme="blue">
-                  Buy Latte
-                </Button>
-              </CardFooter>
             </Stack>
           </Card>
         </VStack>

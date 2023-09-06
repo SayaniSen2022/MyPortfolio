@@ -9,6 +9,7 @@ import {
   Card,
   Text,
   SimpleGrid,
+  Tag,
 } from "@chakra-ui/react";
 
 const Projects = forwardRef((props, ref) => {
@@ -20,15 +21,15 @@ const Projects = forwardRef((props, ref) => {
             <CardBody>
               <div className="container">
                 <Image
-                  src="./Cone.jpg"
-                  alt="Application logo"
+                  src="./H-io.jpg"
+                  alt="Hypertensive.io logo"
                   borderRadius="lg"
                 />
                 <div className="overlay">
                   <Heading className="card-heading" size="md">
                     Hypertensive.io
                   </Heading>
-                  <Text className="text">React JS</Text>
+                  <Text className="text">React, ChakraUI, ChartJS</Text>
                   <a
                     href="https://hypertensive-io.netlify.app/"
                     target="_blank"
@@ -63,8 +64,8 @@ const Projects = forwardRef((props, ref) => {
             <CardBody>
               <div className="container">
                 <Image
-                  src="./CardTwo.jpg"
-                  alt="Application logo"
+                  src="./LittleLemon.jpg"
+                  alt="LittleLemon logo"
                   borderRadius="lg"
                 />
                 <div className="overlay">
@@ -116,28 +117,18 @@ const Projects = forwardRef((props, ref) => {
                   <Heading className="card-heading" size="md">
                     United Engineering Works
                   </Heading>
-                  <Text className="text">React JS</Text>
-                  <a
-                    href="https://github.com/SayaniSen2022/united-eng-works"
-                    target="_blank"
-                  >
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      color="pink.500"
-                      className="button-element"
-                      colorScheme="pink"
-                    >
-                      Learn More
-                    </Button>
-                  </a>
+                  <Tag size="md" color="white" bgColor="orange.400" m="1">
+                    Coming Soon
+                  </Tag>
                 </div>
               </div>
               <Stack mt="6" spacing="3">
                 <Heading size="md" color="black">
                   United Engineering Works
                 </Heading>
-                <Text color="black">Coming Soon!</Text>
+                <Tag color="white" bgColor="orange.400" w="8rem">
+                  Coming Soon!
+                </Tag>
               </Stack>
             </CardBody>
           </Card>
