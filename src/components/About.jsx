@@ -58,6 +58,18 @@ const About = () => {
               solutions.
             </p>
           </Text>
+          <Button
+            size="md"
+            variant="solid"
+            colorScheme="orange"
+            my="2"
+            onClick={() => {
+              downloadAtUrl(RESUME_URL);
+            }}
+          >
+            Download My Resume
+            <ArrowDownIcon />
+          </Button>
         </section>
         <section className="section-two">
           <Heading my="2" size="lg" color="blue.500">
@@ -109,20 +121,6 @@ const About = () => {
             </ListItem>
           </UnorderedList>
         </section>
-      </div>
-      <div className="buttons">
-        <Button
-          size="md"
-          variant="solid"
-          colorScheme="orange"
-          mb="4"
-          onClick={() => {
-            downloadAtUrl(RESUME_URL);
-          }}
-        >
-          Download My Resume
-          <ArrowDownIcon />
-        </Button>
       </div>
     </>
   );
