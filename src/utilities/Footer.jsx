@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, HStack } from "@chakra-ui/react";
+import { Box, Text, HStack, Link } from "@chakra-ui/react";
 import { Icon } from "@chakra-ui/icons";
 import {
   AiFillTwitterCircle,
@@ -18,13 +18,22 @@ const Footer = () => {
           </Text>
         </Box>
         <Box className="social-icons twitter">
-          <Icon as={AiFillTwitterCircle} />
+          <Link href="https://twitter.com/sayani___" target="_blank">
+            <Icon as={AiFillTwitterCircle} />
+          </Link>
         </Box>
         <Box className="social-icons linkedin">
-          <Icon as={AiFillLinkedin} />
+          <Link
+            href="https://www.linkedin.com/in/sayani-sen-535749147/"
+            target="_blank"
+          >
+            <Icon as={AiFillLinkedin} />
+          </Link>
         </Box>
         <Box className="social-icons github">
-          <Icon as={AiFillGithub} />
+          <Link href="https://github.com/SayaniSen2022" target="_blank">
+            <Icon as={AiFillGithub} />
+          </Link>
         </Box>
       </HStack>
     </div>
