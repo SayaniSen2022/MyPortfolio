@@ -17,7 +17,7 @@ const ProjectMobi = forwardRef((props, ref) => {
   return (
     <>
       <div ref={ref} className="container-mobi">
-        <VStack pt="12rem" pb="2rem" mx="2rem">
+        <VStack pt="15rem" pb="2rem" mx="2rem">
           <Card
             direction={{ base: "column", sm: "row" }}
             overflow="hidden"
