@@ -22,7 +22,7 @@ const Hero = () => {
       <div className="hero-section">
         <Stack>
           <HStack>
-            <Box maxW="35rem">
+            <Box maxW="35rem" color="white">
               <Heading
                 as="h1"
                 size="4xl"
@@ -33,7 +33,7 @@ const Hero = () => {
                 Get ideas turned into <Text className="typed">reality.</Text>
               </Heading>
             </Box>
-            <Box maxW="45rem">
+            <Box maxW="45rem" color="white">
               <Heading as="h1" size="2xl" my="10rem" ml="5rem">
                 I'm Sayani. A front-end developer.
               </Heading>
