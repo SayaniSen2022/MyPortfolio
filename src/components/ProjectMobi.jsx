@@ -17,7 +17,7 @@ const ProjectMobi = forwardRef((props, ref) => {
   return (
     <>
       <div ref={ref} className="container-mobi">
-        <VStack pt="15rem" pb="2rem" mx="2rem">
+        <VStack pt="13rem" pb="2rem" mx="2rem">
           <Card
             direction={{ base: "column", sm: "row" }}
             overflow="hidden"
@@ -102,7 +102,7 @@ const ProjectMobi = forwardRef((props, ref) => {
             <Image
               objectFit="cover"
               maxW={{ base: "100%", sm: "200px" }}
-              src="./CardThree.jpg"
+              src="./comingsoon.jpg"
               alt="coming soon"
             />
 

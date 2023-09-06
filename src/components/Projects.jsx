@@ -109,7 +109,7 @@ const Projects = forwardRef((props, ref) => {
             <CardBody>
               <div className="container">
                 <Image
-                  src="./CardThree.jpg"
+                  src="./comingsoon.jpg"
                   alt="Application logo"
                   borderRadius="lg"
                 />
