@@ -95,12 +95,10 @@ const Projects = forwardRef((props, ref) => {
                   Little Lemon Restaurant
                 </Heading>
                 <Text color="black">
-                  Discover Little Lemon - a modern Mediterranean-inspired
-                  restaurant featuring locally-sourced ingredients and bold,
-                  refreshing flavors. Enjoy our signature lemon-infused dishes,
-                  fresh seafood, and grilled meats in a warm and inviting
-                  ambiance perfect for any occasion. Come savor the taste of the
-                  Mediterranean at Little Lemon today!
+                  It is a demo website for an imaginary restaurant, a part of
+                  the META Front-End Developer Professional Certification. It is
+                  the capstone project and consists of a table reservation
+                  feature.
                 </Text>
               </Stack>
             </CardBody>
