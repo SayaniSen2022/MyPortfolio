@@ -1,77 +1,55 @@
-import React, { useRef } from "react";
-import { Stack, HStack, Box, Heading, Text } from "@chakra-ui/react";
-import { MdKeyboardDoubleArrowDown } from "react-icons/md";
+import { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { Stack, HStack, Box, Heading, Text, Image } from "@chakra-ui/react";
 import "./Hero.css";
-import Projects from "./Projects";
-import { IconContext } from "react-icons";
-import ProjectMobi from "./ProjectMobi";
 
 const Hero = () => {
-  const workRef = useRef(null);
-  const projectRef = useRef(null);
 
-  const handleClickMobi = () => {
-    projectRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const handleClick = () => {
-    workRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+ useEffect(() => {
+    AOS.init({
+      duration: 1000, // or your preferred default duration
+      once: false,
+    });
+  }, []);
+  
   return (
     <>
       <div className="hero-section">
-        <Stack>
-          <HStack>
-            <Box maxW="35rem">
-              <Heading
-                as="h1"
-                size="4xl"
-                my="7rem"
-                ml="5rem"
-                lineHeight="initial"
-              >
-                Get ideas turned into <Text className="typed">reality.</Text>
-              </Heading>
-            </Box>
-            <Box maxW="45rem">
-              <Heading as="h1" size="2xl" my="10rem" ml="5rem">
-                I'm Sayani. A front-end developer.
-              </Heading>
-            </Box>
-          </HStack>
-          <div id="explore-button">
-            <IconContext.Provider value={{ className: "arrow", size: 70 }}>
-              <MdKeyboardDoubleArrowDown onClick={handleClick} />
-            </IconContext.Provider>
-          </div>
-        </Stack>
-        <Projects ref={workRef} />
-      </div>
-      <div className="hero-mobile">
-        <Stack>
-          <Box maxW="25rem">
+        <Box maxW="48rem" my="0" mx="auto">
             <Heading
-              as="h1"
-              size="4xl"
-              my="3rem"
-              ml="3rem"
+              size="4xl"              
+              pl="1rem"
+              py="10rem"
               lineHeight="initial"
+              textAlign="center"
+              className="anim-head"
             >
               Get ideas turned into <Text className="typed">reality.</Text>
             </Heading>
-          </Box>
+        </Box>
+        <div className="container">
+          <div className="item-left">
+            <p className="my-details" data-aos="fade-up" data-aos-duration="4000">
+              Hi, I’m <span style={{color: '#fef08a', fontWeight: '500'}}>Sayani</span> — a frontend web developer with nearly 2 years of experience in the industry. 
+                  I currently work at an eCommerce organization, where I design and develop intuitive UI/UX for both 
+                  in-house platforms and client-facing projects. I’m passionate about crafting clean, responsive, and 
+                  user-friendly interfaces that bring digital ideas to life. Open to collaboration and freelance 
+                  work — let’s connect and build something great together!
+            </p>
+          </div>
+          <div className="item-right" style={{overflow: 'hidden'}} ><img src="./profile.jpg" alt="profile" data-aos="fade-left" /></div> 
+        </div>
+                   
+      </div>
+      <div className="hero-mobile">
+        <Stack>          
           <Box maxW="20rem">
             <Heading as="h1" size="3xl" ml="3rem">
               I'm Sayani. A front-end developer.
             </Heading>
-          </Box>
-          <div id="explore-button">
-            <IconContext.Provider value={{ className: "arrow", size: 70 }}>
-              <MdKeyboardDoubleArrowDown onClick={handleClickMobi} />
-            </IconContext.Provider>
-          </div>
+          </Box>          
         </Stack>
-        <ProjectMobi ref={projectRef} />
       </div>
     </>
   );

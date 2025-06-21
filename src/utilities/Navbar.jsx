@@ -15,7 +15,7 @@ const Navbar = () => {
               <NavLink
                 to="/"
                 className={({ isActive }) => {
-                  return isActive ? "text-orange-500" : "text-white";
+                  return isActive ? "text-yellow-200" : "text-white";
                 }}
                 onClick={() => setShowMenu(!showMenu)}
               >
@@ -26,11 +26,33 @@ const Navbar = () => {
               <NavLink
                 to="/about"
                 className={({ isActive }) => {
-                  return isActive ? "text-orange-500" : "text-white";
+                  return isActive ? "text-yellow-200" : "text-white";
                 }}
                 onClick={() => setShowMenu(!showMenu)}
               >
                 About
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                  to="/projects"
+                  className={({ isActive }) => {
+                    return isActive ? "text-yellow-200" : "text-white";
+                  }}
+                  onClick={() => setShowMenu(!showMenu)}
+                >
+                  Projects
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                  to="/contact"
+                  className={({ isActive }) => {
+                    return isActive ? "text-yellow-200" : "text-white";
+                  }}
+                  onClick={() => setShowMenu(!showMenu)}
+                >
+                  Contact Me
               </NavLink>
             </li>
           </ul>
