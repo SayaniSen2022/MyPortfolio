@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 @tailwind base;
 @tailwind components;
@@ -13,3 +15,66 @@
   box-sizing: border-box;
 }
 a{text-decoration: none;color: #fff;}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+    -webkit-text-fill-color: #1A202C !important;
+    transition: #fff 5000s ease-in-out 0s; /* Prevents a flicker */
+}
+
+/***contact-me page css***/
+.outer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  height: 77.5vh;
+}
+
+.con-left {
+  flex: 1;
+  text-align: left;
+}
+.con-left p{font-family: "Roboto", sans-serif;font-size: 5.5rem;}
+.contact-me p{font-family: "Roboto", sans-serif;font-size: 1.2rem;}
+.con-right {
+  flex: 1;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.contact-form button {
+  width: 100px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #555;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+}

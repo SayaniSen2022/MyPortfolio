@@ -1,8 +1,11 @@
 import { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Stack, HStack, Box, Heading, Text, Image } from "@chakra-ui/react";
+import { Stack, Box, Heading, Text, Button } from "@chakra-ui/react";
 import "./Hero.css";
+import { ArrowDownIcon } from "@chakra-ui/icons";
+
+const RESUME_URL = "./Resume-Sayani Sen.pdf";
 
 const Hero = () => {
 
@@ -12,6 +15,16 @@ const Hero = () => {
       once: false,
     });
   }, []);
+
+  const downloadAtUrl = (url) => {
+    const fileName = "SayaniSen-Resume";
+    const aTag = document.createElement("a");
+    aTag.href = url;
+    aTag.setAttribute("download", fileName);
+    document.body.appendChild(aTag);
+    aTag.click();
+    aTag.remove();
+  };
   
   return (
     <>
@@ -36,11 +49,15 @@ const Hero = () => {
                   in-house platforms and client-facing projects. I’m passionate about crafting clean, responsive, and 
                   user-friendly interfaces that bring digital ideas to life. Open to collaboration and freelance 
                   work — let’s connect and build something great together!
-            </p>
+                  <Button size="sm" variant="solid" colorScheme="yellow" my="2" onClick={() => { downloadAtUrl(RESUME_URL); }} >
+                    Download My Resume
+                    <ArrowDownIcon />
+                  </Button>
+            </p>            
           </div>
           <div className="item-right" style={{overflow: 'hidden'}} ><img src="./profile.jpg" alt="profile" data-aos="fade-left" /></div> 
         </div>
-                   
+        
       </div>
       <div className="hero-mobile">
         <Stack>          

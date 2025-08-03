@@ -22,7 +22,7 @@ const Navbar = () => {
                 Home
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink
                 to="/about"
                 className={({ isActive }) => {
@@ -32,8 +32,8 @@ const Navbar = () => {
               >
                 About
               </NavLink>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <NavLink
                   to="/projects"
                   className={({ isActive }) => {
@@ -43,7 +43,7 @@ const Navbar = () => {
                 >
                   Projects
               </NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink
                   to="/contact"
