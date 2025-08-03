@@ -1,11 +1,9 @@
 import React from "react";
 import { Box, Text, HStack, Link } from "@chakra-ui/react";
 import { Icon } from "@chakra-ui/icons";
-import {
-  AiFillTwitterCircle,
-  AiFillLinkedin,
-  AiFillGithub,
-} from "react-icons/ai";
+import { RiTwitterXFill } from "react-icons/ri";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa6";
 import "./Footer.css";
 
 const Footer = () => {
@@ -13,13 +11,13 @@ const Footer = () => {
     <div className="footer-section">
       <HStack spacing={6}>
         <Box>
-          <Text fontSize="xs" pt="1">
-            SayaniSen@2023
+          <Text fontSize="xs" pt="2">
+            SayaniSenPortfolio@2025
           </Text>
         </Box>
         <Box className="social-icons twitter">
           <Link href="https://twitter.com/sayani___" target="_blank">
-            <Icon as={AiFillTwitterCircle} />
+            <Icon as={RiTwitterXFill} />
           </Link>
         </Box>
         <Box className="social-icons linkedin">
@@ -27,12 +25,12 @@ const Footer = () => {
             href="https://www.linkedin.com/in/sayani-sen-535749147/"
             target="_blank"
           >
-            <Icon as={AiFillLinkedin} />
+            <Icon as={FaLinkedinIn} />
           </Link>
         </Box>
         <Box className="social-icons github">
           <Link href="https://github.com/SayaniSen2022" target="_blank">
-            <Icon as={AiFillGithub} />
+            <Icon as={FaGithub} />
           </Link>
         </Box>
       </HStack>

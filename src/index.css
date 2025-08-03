@@ -39,8 +39,12 @@ input:-webkit-autofill:active {
   flex: 1;
   text-align: left;
 }
-.con-left p{font-family: "Roboto", sans-serif;font-size: 5.5rem;}
-.contact-me p{font-family: "Roboto", sans-serif;font-size: 1.2rem;}
+.touch-head{font-family: "Roboto", sans-serif;font-size: 5.5rem;color: #2c2c2c;
+    letter-spacing: .05em;
+    text-shadow: 5px -3px 3px rgba(178,245,234,0.66);
+    /* text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2); */
+  }
+.contact-me p{font-family: "Roboto", sans-serif;font-size: 1.2rem;  text-shadow: .1em .1em 0 #d5d5d5;}
 .con-right {
   flex: 1;
 }
@@ -51,10 +55,12 @@ input:-webkit-autofill:active {
   gap: 0.5rem;
 }
 
+.contact-form label{font-size: 15px;}
+
 .contact-form input,
 .contact-form textarea {
   padding: 5px;
-  font-size: 1rem;
+  font-size: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
   outline: none;

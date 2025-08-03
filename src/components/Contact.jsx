@@ -27,7 +27,14 @@ const Contact = () => {
     } else if (!/\S+@\S+\.\S+/.test(email)) {
       newErrors.email = 'Email is invalid';
     }
-    if (!message.trim()) newErrors.message = 'Message is required';
+    if (!message.trim()){
+      newErrors.message = 'Message is required';
+    } else{
+      const wordCount = message.trim().split(/\s+/).length;
+      if(wordCount > 100){
+        newErrors.message = `Message exceeds 100 words limit (currently ${wordCount}).`
+      }
+    }
     return newErrors;
   };
 
@@ -56,7 +63,7 @@ const Contact = () => {
   return (
     <div className='outer-container'>
       <div className='con-left'>
-        <p>Get in Touch</p>
+        <p className='touch-head'>Get in Touch</p>
         <div className='contact-me'>
           <p>Email: sayanisen.official@gmail.com</p>
           <p>Phone No.: 8335966303</p>
@@ -88,7 +95,9 @@ const Contact = () => {
           <label htmlFor='message'> Message: </label>
           <textarea
               name='message'
-              rows='3'
+              rows='6'
+              cols='3'
+              style={{resize: 'none'}}
               value={formData.message}
               onChange={handleChange}
               id="message"
