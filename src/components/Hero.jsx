@@ -55,7 +55,7 @@ const Hero = () => {
                   </Button>
             </p>            
           </div>
-          <div className="item-right" style={{overflow: 'hidden'}} ><img src="./profile.jpg" alt="profile" data-aos="fade-left" /></div> 
+          <div className="item-right" style={{overflow: 'hidden'}} ><img src="./images/profile.jpg" alt="profile" data-aos="fade-left" /></div> 
         </div>
         
       </div>

@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-.hero-section { background: #181818; color: white; }
+.hero-section{color: var(--text-2);}
 .container{display: flex;align-items: center;justify-content: space-between;padding: 1rem 6rem;gap: 1rem;}
 .item-left{width: 50%;}
-.my-details{font-size: 18px;font-weight: 100;line-height: 30px;}
+.my-details{font-size: 18px;font-weight: 100;line-height: 30px; color: var(--text-1);}
 .item-right img{width: 400px; height: 400px; border-radius: 50%; object-fit: cover;}
 #explore-button { animation: animate 3s linear infinite; }
 

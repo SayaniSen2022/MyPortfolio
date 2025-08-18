@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../src/index.css';
+import './Contact.css';
 import { Button, useToast } from "@chakra-ui/react"
 
 const Contact = () => {
@@ -62,16 +62,35 @@ const Contact = () => {
 
   return (
     <div className='outer-container'>
-      <div className='con-left'>
-        <p className='touch-head'>Get in Touch</p>
-        <div className='contact-me'>
-          <p>Email: sayanisen.official@gmail.com</p>
-          <p>Phone No.: 8335966303</p>
-        </div>
+      
+      <div class="card">
+          <div class="user-face">
+              <img src="./images/profile.jpg" alt="face"/>
+          </div>
+          <div>
+              <div>
+                  <h1>Sayani Sen</h1>
+                  <p>sayanisen.official@gmail.com</p>
+              </div>
+              <div class="flex-between">
+                  <div>
+                  <div>UI/UX Developer | Front-End Developer</div>      
+                  </div>
+              </div>
+
+              <div class='socials'>
+                  <p>
+                  <span class="text-accent"><i class="fa-brands fa-linkedin"></i></span>
+                  <span class="text-accent"><i class="fa-brands fa-square-x-twitter"></i></span>
+                  <span class="text-accent"><i class="fa-brands fa-square-github"></i></span>
+                  </p>
+              </div>
+          </div>
       </div>
 
       <div className='con-right'>
-        <form className='contact-form' onSubmit={handleSubmit}>
+        <h2 className='form-heading'>Get in Touch</h2>
+        <form className='contact-form' onSubmit={handleSubmit}>          
           <label htmlFor='name'> Name: </label>
           <input
               type='text'
@@ -104,7 +123,7 @@ const Contact = () => {
             ></textarea>
             {errors.message && <span className='error'>{errors.message}</span>}
 
-          <Button type='submit'>Send</Button>
+          <Button type='submit' colorScheme='yellow' variant='solid' my="0" mx="auto">Send</Button>
         </form>
       </div>
     </div>

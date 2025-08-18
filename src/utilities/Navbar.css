@@ -8,7 +8,12 @@
   height: 3em;
   display: grid;
   grid-template-columns: 6em 2fr 1fr 3em;
-  background: #181818;
+  /* background: #181818; */
+  /* background-image: linear-gradient(
+      hsl(from var(--primary-700) h s l / 0.7) 0 0
+    ),
+    url("./images/jellyfish_monotone.webp");
+  background-position: top left; */
   position: sticky;
   z-index: 1;
   top: 0;

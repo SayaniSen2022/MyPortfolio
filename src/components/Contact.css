@@ -1,0 +1,164 @@
+
+h1 {
+  color: var(--text-1);
+}
+
+h1 {
+  font-size: 1.325rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.text-accent {
+  color: var(--primary-300);font-size: 22px;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.card {
+  max-inline-size: 460px;
+  margin-inline: auto;
+  padding: 20px 35px;
+  line-height: 40px;
+  display: flex;
+  gap: 1lh;
+}
+
+.referral-code {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: hsl(from var(--surface-1) h s l / 0.5);
+  padding: 0.5ex 1ch;
+  font-size: 1.125rem;
+  border-radius: 12px;
+  color: var(--text-1);
+  letter-spacing: 3px;
+}
+
+.copy {
+  cursor: pointer;
+  background: 0;
+  border: 0;
+  padding: 0;
+  height: 1.5lh;
+
+  svg {
+    fill: var(--text-1);
+    width: 3ch;
+    height: 3ch;
+  }
+}
+
+.referred-users {
+  text-align: end;
+}
+
+.user-count {
+  font-size: 1.125rem;
+  color: var(--text-1);
+}
+
+.socials {
+  text-align: left;
+  color: var(--text-1);
+  /* background: hsl(from var(--surface-1) h s l / 0.5); */
+  /* padding: 1ex 3ch; */
+  border-radius: 12px;
+
+  h2 {
+    color: var(--text-3);
+  }
+}
+
+.card {
+  --border-width: 1px;
+  border-radius: 1rem;
+  position: relative;
+
+  background: hsl(from var(--surface-3) h s l / 0.25);
+  backdrop-filter: blur(12px);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  border: var(--border-width) solid transparent;
+  background: linear-gradient(var(--border-1), var(--border-2)) border-box;
+  mask: linear-gradient(black, black) border-box,
+    linear-gradient(black, black) padding-box;
+  mask-composite: subtract;
+}
+.user-face img{border-radius: 50%;height: 60px;width: 60px;object-fit: cover;}
+
+
+.outer-container {
+  padding: 2rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+}
+
+.con-left {
+  flex: 1;
+  text-align: left;
+}
+.touch-head{font-family: "Roboto", sans-serif;font-size: 5.5rem;color: #2c2c2c;
+    letter-spacing: .05em;
+    text-shadow: 5px -3px 3px rgba(178,245,234,0.66);
+    /* text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2); */
+  }
+.contact-me p{font-family: "Roboto", sans-serif;font-size: 1.2rem;  text-shadow: .1em .1em 0 #d5d5d5;}
+.con-right {
+  flex: 1;
+}
+.form-heading{font-size: 2rem;color: var(--text-2);}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem;
+  max-inline-size: 460px;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+}
+
+.contact-form label{font-size: 15px;color: #fff;}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 5px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.contact-form button {
+  width: 100px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #555;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+}
