@@ -22,3 +22,23 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Node
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Vite build
+client/dist
+
+# Server logs
+server/logs
+*.log
+
+# Env files
+client/.env
+server/.env
+
+# OS stuff
+.DS_Store
+Thumbs.db
