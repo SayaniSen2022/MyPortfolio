@@ -1,2 +1,2 @@
 # PORTFOLIO
-## Technologies used: React JS, HTML, CSS, ChakraUI & Tailwind.
+## Technologies used: React JS, HTML, CSS, NodeJS(Express) ChakraUI & Tailwind.
