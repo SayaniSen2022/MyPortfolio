@@ -1,7 +1,7 @@
 // routes/userRoutes.js
 import { Router } from "express";
 const router = Router();
-import { getAllUsers, getUserById } from "../controllers/userController";
+import { getAllUsers, getUserById } from "../controllers/userController.js";
 
 // GET /api/users → return all users
 router.get("/", getAllUsers);
