@@ -1,0 +1,19 @@
+.footer-section {
+  padding: 1rem;
+  color: #b2f5ea;
+  display: flex;
+  justify-content: space-between;
+}
+.social-icons {
+  cursor: pointer;
+}
+
+.twitter:hover {
+  color: #1d9bf0;
+}
+.linkedin:hover {
+  color: #0072b1;
+}
+.github:hover {
+  color: #808080;
+}
