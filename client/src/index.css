@@ -69,7 +69,7 @@ input, textarea{color: #1a202c !important;}
   background-image: linear-gradient(
       hsl(from var(--primary-700) h s l / 0.7) 0 0
     ),
-    url("./images/jellyfish_monotone.webp");
+    url("/images/jellyfish_monotone.webp");
   /* background-position: top left; */
   background-position: bottom right;
   background-size: 300%;
