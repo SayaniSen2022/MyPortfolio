@@ -13,8 +13,9 @@ export const sendMail = async (req, res) => {
     });
 
     await transporter.sendMail({
-      from: email,
+      from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
+      replyTo: email,
       subject: `Portfolio Contact: ${name}`,
       text: message,
       html: `<p><b>Name:</b> ${name}</p>

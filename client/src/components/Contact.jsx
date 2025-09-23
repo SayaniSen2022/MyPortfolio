@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { BASE_URL } from './api';
 import './Contact.css';
 import { Button, useToast } from "@chakra-ui/react"
 
@@ -43,13 +44,14 @@ const Contact = () => {
 
 const handleSubmit = async (e) => {
   e.preventDefault();
+  console.log(formData);
   const validationErrors = validateForm();
   setErrors(validationErrors);
 
   if (Object.keys(validationErrors).length === 0) {
     try {
       setIsSubmitting(true);
-      const res = await fetch("http://localhost:5000/api/contact", {
+      const res = await fetch(`${BASE_URL}/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -67,6 +69,7 @@ const handleSubmit = async (e) => {
 
         // Clear form
         setFormData({ name: "", email: "", message: "" });
+        setIsSubmitting(false);
       } else {
         toast({
           title: "Error",
