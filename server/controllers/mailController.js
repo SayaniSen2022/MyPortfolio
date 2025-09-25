@@ -37,7 +37,7 @@ export const sendMail = async (req, res) => {
 
   try {
     // Push job into Redis queue instead of sending directly
-    await emailQueue.add("sendEmail", { name, email, message });
+    await emailQueue.add("sendEmail", { name, email, message }, {delay: 15000});
 
     res.status(200).json({
       success: true,

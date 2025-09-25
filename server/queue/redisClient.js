@@ -1,7 +1,11 @@
-// server/queue/redisClient.js
 import Redis from "ioredis";
+import dotenv from "dotenv";
 
-const redis = new Redis(process.env.REDIS_URL);
+dotenv.config();
+
+const redis = new Redis(process.env.REDIS_URL, {
+  maxRetriesPerRequest: null,
+});
 
 redis.on("connect", () => {
   console.log("✅ Connected to Upstash Redis");
