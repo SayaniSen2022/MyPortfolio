@@ -5,7 +5,7 @@ import { Stack, Box, Heading, Text, Button } from "@chakra-ui/react";
 import "./Hero.css";
 import { ArrowDownIcon } from "@chakra-ui/icons";
 
-const RESUME_URL = "./MyResume2025.pdf";
+const RESUME_URL = "./SayaniSenResume.pdf";
 
 const Hero = () => {
 
