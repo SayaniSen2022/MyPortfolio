@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Stack, Box, Heading, Text, Button } from "@chakra-ui/react";
+import { Box, Heading, Text } from "@chakra-ui/react";
 import "./Hero.css";
 import { ArrowDownIcon } from "@chakra-ui/icons";
 
@@ -49,24 +49,17 @@ const Hero = () => {
                   in-house platforms and client-facing projects. I’m passionate about crafting clean, responsive, and 
                   user-friendly interfaces that bring digital ideas to life. Open to collaboration and freelance 
                   work — let’s connect and build something great together!
-                  <button className="btn btn-2 hover-slide-left" onClick={() => { downloadAtUrl(RESUME_URL); }} >
-                   <span>Download My Resume</span> 
-                    <ArrowDownIcon />
+                  <div>
+                    <button className="btn btn-2 hover-slide-left" onClick={() => { downloadAtUrl(RESUME_URL); }} >
+                    <span>Download My Resume</span><ArrowDownIcon />
                   </button>
+                  </div>
+                  
             </p>            
           </div>
           <div className="item-right" style={{overflow: 'hidden'}} ><img src="./images/profile.jpg" alt="profile" data-aos="fade-left" /></div> 
         </div>
         
-      </div>
-      <div className="hero-mobile">
-        <Stack>          
-          <Box maxW="20rem">
-            <Heading as="h1" size="3xl" ml="3rem">
-              I'm Sayani. A front-end developer.
-            </Heading>
-          </Box>          
-        </Stack>
       </div>
     </>
   );

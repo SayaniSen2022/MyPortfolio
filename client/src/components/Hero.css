@@ -82,16 +82,6 @@
 
 
 @media (max-width: 600px) {
-  .hero-section {
-    display: none;
-  }
-  .hero-mobile {
-    background-image: linear-gradient(to left, black, blue);
-    color: white;
-  }
-}
-@media (min-width: 600px) {
-  .hero-mobile {
-    display: none;
-  }
+  .container{flex-direction: column-reverse;padding: 1rem 2rem;}
+  .item-left{width: 100%;}
 }
