@@ -50,9 +50,7 @@ const Hero = () => {
                   user-friendly interfaces that bring digital ideas to life. Open to collaboration and freelance 
                   work — let’s connect and build something great together!
                   <div>
-                    <button className="btn btn-2 hover-slide-left" onClick={() => { downloadAtUrl(RESUME_URL); }} >
-                    <span>Download My Resume</span><ArrowDownIcon />
-                  </button>
+                    <button className="btn btn-2 hover-slide-left" onClick={() => { downloadAtUrl(RESUME_URL); }} > <span>Download My Resume</span><ArrowDownIcon /> </button>
                   </div>
                   
             </p>            
