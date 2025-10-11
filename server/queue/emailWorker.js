@@ -7,6 +7,7 @@ const worker = new Worker(
   "emailQueue",
   async job => {
     const { name, email, message } = job.data;
+    console.log("Email worker: ",redis);
 
     const transporter = nodemailer.createTransport({
       service: "gmail",

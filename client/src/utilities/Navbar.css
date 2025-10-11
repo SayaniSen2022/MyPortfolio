@@ -60,16 +60,16 @@ li { list-style: none; cursor: pointer;}
   }
   .mobile-menu-link {
     z-index: 1;
-    background-color: #042242;
+    background-color: rgba(0,0,0,0.4);
     position: relative;
-    left: 9.75rem;
+    left: -1rem;
     overflow-x: hidden;
-    height: 10rem;
-    width: 11rem;
+    height: 6rem;
+    width: 8rem;
     display: grid;
-    grid-column: 2/5;
-    padding: 1rem 0 0 3rem;
-    border-radius: 15px;
+    grid-column: 2 / 5;
+    padding: 1rem;
+    border-radius: 10px;
     transition: all 2s linear;
     transform-origin: bottom;
     justify-content: start;
@@ -78,19 +78,22 @@ li { list-style: none; cursor: pointer;}
   .mobile-menu-link ul {
     display: flex;
     flex-direction: column;
-    align-self: flex-start;
+    align-items: flex-start;
   }
 
   .mobile-menu-link ul li:first-child {
     transition-delay: 0.2s;
   }
+  .mobile-menu-link ul li{margin-right: 0;}
   .hamburger-menu {
     grid-row: 1/2;
-    grid-column: 3/5;
+    grid-column: 1/5;
     align-items: center;
     transition: all 2s linear;
     display: flex;
-    justify-self: end;
+    justify-self: start;
+    padding-left: 1rem;
+    padding-top: 1rem;
   }
   .ham {
     display: block;
