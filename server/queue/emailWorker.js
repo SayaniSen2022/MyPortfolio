@@ -1,12 +1,13 @@
-// server/queue/emailWorker.js
 import { Worker } from "bullmq";
 import redis from "./redisClient.js";
 import nodemailer from "nodemailer";
 
+
 const worker = new Worker(
   "emailQueue",
-  async (job) => {
-    console.log("📨 Processing job:", job.data);
+  async job => {
+    const { name, email, message } = job.data;
+    console.log("Email worker: ",redis);
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -19,19 +20,12 @@ const worker = new Worker(
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
-      replyTo: job.data.email,
-      subject: `Portfolio Contact: ${job.data.name}`,
-      text: job.data.message,
-      html: `<p><b>Name:</b> ${job.data.name}</p>
-             <p><b>Email:</b> ${job.data.email}</p>
-             <p><b>Message:</b> ${job.data.message}</p>`,
+      replyTo: email,
+      subject: `Portfolio Contact: ${name}`,
+      text: message,
     });
 
-    console.log("✅ Email sent successfully!");
+    console.log(`Recipient: ${process.env.EMAIL_USER}; From: ${email}(${name}); Message: ${message}`);
   },
   { connection: redis }
 );
-
-worker.on("failed", (job, err) => {
-  console.error(`❌ Job ${job.id} failed:`, err);
-});
