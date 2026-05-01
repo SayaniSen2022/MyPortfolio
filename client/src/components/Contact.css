@@ -73,6 +73,9 @@ h2 {
   /* background: hsl(from var(--surface-1) h s l / 0.5); */
   /* padding: 1ex 3ch; */
   border-radius: 12px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
 
   h2 {
     color: var(--text-3);

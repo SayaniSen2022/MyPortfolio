@@ -1,7 +1,11 @@
 import { useState } from 'react';
 import { BASE_URL } from './api';
 import './Contact.css';
-import { Button, useToast } from "@chakra-ui/react"
+import { Button, useToast, Link } from "@chakra-ui/react"
+import { Icon } from "@chakra-ui/icons";
+import { RiTwitterXFill } from "react-icons/ri";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa6";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -98,8 +102,8 @@ const handleSubmit = async (e) => {
   return (
     <div className='outer-container'>
       
-      <div class="card">
-          <div class="user-face">
+      <div className="card">
+          <div className="user-face">
               <img src="./images/profile.jpg" alt="face"/>
           </div>
           <div>
@@ -107,18 +111,30 @@ const handleSubmit = async (e) => {
                   <h1>Sayani Sen</h1>
                   <p>sayanisen.official@gmail.com</p>
               </div>
-              <div class="flex-between">
+              <div className="flex-between">
                   <div>
                   <div>UI/UX Developer | Front-End Developer</div>      
                   </div>
               </div>
 
-              <div class='socials'>
-                  <p>
-                  <span class="text-accent"><i class="fa-brands fa-linkedin"></i></span>
-                  <span class="text-accent"><i class="fa-brands fa-square-x-twitter"></i></span>
-                  <span class="text-accent"><i class="fa-brands fa-square-github"></i></span>
-                  </p>
+              <div className='socials'>
+                  
+                  <span className="text-accent">
+                    <Link href="https://www.linkedin.com/in/sayani-sen-535749147/" target="_blank" >
+                      <Icon as={FaLinkedinIn} />
+                    </Link>
+                  </span>
+                  <span className="text-accent">
+                    <Link href="https://github.com/SayaniSen2022" target="_blank">
+                      <Icon as={FaGithub} />
+                    </Link>
+                  </span>
+                  <span className="text-accent">
+                    <Link href="https://twitter.com/sayani___" target="_blank">
+                      <Icon as={RiTwitterXFill} />
+                    </Link>
+                  </span>
+                  
               </div>
           </div>
       </div>
