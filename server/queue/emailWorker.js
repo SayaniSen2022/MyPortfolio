@@ -2,6 +2,8 @@
 import { Worker } from "bullmq";
 import redis from "./redisClient.js";
 import nodemailer from "nodemailer";
+import dotenv from "dotenv";
+dotenv.config();
 
 const worker = new Worker(
   "emailQueue",
@@ -15,6 +17,9 @@ const worker = new Worker(
         pass: process.env.EMAIL_PASS,
       },
     });
+
+    console.log("EMAIL_USER:", process.env.EMAIL_USER);
+    console.log("EMAIL_PASS:", process.env.EMAIL_PASS);
 
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
