@@ -15,18 +15,21 @@ import { BiGitMerge } from "react-icons/bi";
 import { Icon } from "@chakra-ui/icons";
 import { ArrowDownIcon } from "@chakra-ui/icons";
 
-const RESUME_URL = `${window.location.origin}/Resume2026.pdf`;
+const RESUME_URL = "/Resume2026.pdf";
 
 const About = () => {
-  const downloadAtUrl = (url) => {
-    const fileName = "SayaniSen-Resume.pdf";
-    const aTag = document.createElement("a");
-    aTag.href = url;
-    aTag.setAttribute("download", fileName);
-    document.body.appendChild(aTag);
-    aTag.click();
-    aTag.remove();
-  };
+    
+  // const downloadAtUrl = (url) => {
+  //   const fileName = "SayaniSen-Resume.pdf";
+  //   const aTag = document.createElement("a");
+  //   aTag.href = url;
+  //   aTag.setAttribute("download", fileName);
+  //   document.body.appendChild(aTag);
+  //   aTag.click();
+  //   aTag.remove();
+  // };
+
+  
   return (
     <>
       <div className="structure">
@@ -58,18 +61,18 @@ const About = () => {
               solutions.
             </p>
           </Text>
-          <Button
-            size="md"
-            variant="solid"
-            colorScheme="orange"
-            my="2"
-            onClick={() => {
-              downloadAtUrl(RESUME_URL);
-            }}
-          >
-            Download My Resume
-            <ArrowDownIcon />
-          </Button>
+          <a href="/Resume2026.pdf" download="SayaniSen-Resume.pdf">
+             <Button
+                size="md"
+                variant="solid"
+                colorScheme="orange"
+                my="2"
+              >
+                Download My Resume
+                <ArrowDownIcon />
+              </Button>
+          </a>
+         
         </section>
         <section className="section-two">
           <Heading my="2" size="lg" color="blue.500">
