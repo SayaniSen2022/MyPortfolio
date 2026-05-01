@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { GiHamburgerMenu } from "react-icons/gi";
+// import { GiHamburgerMenu } from "react-icons/gi";
+import { RxHamburgerMenu } from "react-icons/rx";
 import "./Navbar.css";
 import "../index.css"
 
@@ -61,7 +62,7 @@ const Navbar = () => {
 
         <div className="hamburger-menu">
           <a href="#" onClick={() => setShowMenu(!showMenu)}>
-            <GiHamburgerMenu className="ham" />
+            <RxHamburgerMenu className="ham" />
           </a>
         </div>
       </nav>
