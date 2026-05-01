@@ -108,16 +108,16 @@ const handleSubmit = async (e) => {
           </div>
           <div>
               <div>
-                  <h1>Sayani Sen</h1>
-                  <p>sayanisen.official@gmail.com</p>
+                  <div className='pb-0 text-2xl font-bold'>Sayani Sen</div>
+                  <p className='text-sm pb-4'>sayanisen.official@gmail.com</p>
               </div>
               <div className="flex-between">
                   <div>
-                  <div>UI/UX Developer | Front-End Developer</div>      
+                  <div className='text-sm pt-2'>UI/UX Developer | Front-End Developer</div>      
                   </div>
               </div>
 
-              <div className='socials'>
+              <div className='socials text-sm pt-6'>
                   
                   <span className="text-accent">
                     <Link href="https://www.linkedin.com/in/sayani-sen-535749147/" target="_blank" >

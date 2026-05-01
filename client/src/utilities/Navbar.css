@@ -46,23 +46,20 @@ li { list-style: none; cursor: pointer;}
 
 @media (max-width: 600px) {
   .main-nav {
-    height: 3rem;
+    height: 5rem;
     grid-template-columns: 2rem 3fr 2rem 2rem;
   }
   .menu-link {
     display: none;
   }
-
   .mobile-menu-link {
     grid-column: 2/4;
     position: relative;
     z-index: 1;
-  }
-  .mobile-menu-link {
-    z-index: 1;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0);
     position: relative;
     left: -1rem;
+    top: -0.1rem;
     overflow-x: hidden;
     height: 6rem;
     width: 8rem;
