@@ -11,7 +11,7 @@ const Footer = () => {
     <div className="footer-section">
       <Box>
           <Text fontSize="xs" pt="2">
-            SayaniSenPortfolio@2025
+            SayaniSenPortfolio@2026
           </Text>
       </Box>
       <HStack spacing={6}>        
