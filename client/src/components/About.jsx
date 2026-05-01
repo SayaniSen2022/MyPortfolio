@@ -15,11 +15,11 @@ import { BiGitMerge } from "react-icons/bi";
 import { Icon } from "@chakra-ui/icons";
 import { ArrowDownIcon } from "@chakra-ui/icons";
 
-const RESUME_URL = "./Resume2026.pdf";
+const RESUME_URL = `${window.location.origin}/Resume2026.pdf`;
 
 const About = () => {
   const downloadAtUrl = (url) => {
-    const fileName = "SayaniSen-Resume";
+    const fileName = "SayaniSen-Resume.pdf";
     const aTag = document.createElement("a");
     aTag.href = url;
     aTag.setAttribute("download", fileName);
