@@ -1,163 +1,213 @@
-# 🌐 Portfolio Website with Email Queue System
+# 🌿 The Soil Beneath
 
-A full-stack portfolio website featuring a contact form powered by a **queue-based email system** using Redis and BullMQ.
-Designed for scalability and reliability, ensuring messages are processed asynchronously.
+A full-stack e-commerce web application for buying indoor and outdoor plants.
 
----
-
-## 🚀 Features
-
-* 🖥️ Modern responsive portfolio UI (React + Vite)
-* 📬 Contact form with validation
-* ⚡ Asynchronous email handling using **BullMQ + Redis**
-* 🔁 Background worker for processing emails
-* 🔐 Secure email sending via **Nodemailer + Gmail App Password**
-* ☁️ Cloud-ready architecture (Frontend + Backend + Queue separation)
+Built using **React + TypeScript + FastAPI + PostgreSQL**, the application provides a modern shopping experience with product browsing, authentication, shopping cart, testimonials, and search functionality.
 
 ---
 
-## 🧱 Tech Stack
+## 🌐 Live Demo
 
-### Frontend
+### Frontend (Cloudflare Pages)
+https://the-soil-beneath.pages.dev/
 
-* React (Vite)
-* Chakra UI
-* CSS / Tailwind (optional usage)
-* Fetch API
+### Backend API (Railway)
+https://the-soil-beneath-production.up.railway.app/
 
-### Backend
-
-* Node.js
-* Express.js
-* Nodemailer
-
-### Queue & Messaging
-
-* BullMQ
-* Redis (Upstash)
-
-### Tools
-
-* Nodemon (dev)
-* dotenv
+API Documentation:
+https://the-soil-beneath-production.up.railway.app/docs
 
 ---
 
-## 🏗️ Architecture
+# ✨ Features
+
+## Customer Features
+
+- Browse all plants
+- Search products
+- Browse by category
+- Featured products section
+- Product details page
+- Customer testimonials
+- User registration
+- User login using JWT authentication
+- Persistent authentication
+- Shopping cart
+- Responsive design
+
+---
+
+# 🛠 Tech Stack
+
+## Frontend
+
+- React
+- TypeScript
+- Vite
+- React Router
+- Axios
+- Tailwind CSS
+
+## Backend
+
+- FastAPI
+- SQLAlchemy
+- Pydantic
+- JWT Authentication
+- Passlib (Password Hashing)
+
+## Database
+
+- PostgreSQL
+
+## Deployment
+
+Frontend:
+- Cloudflare Pages
+
+Backend:
+- Railway
+
+---
+
+# 📁 Project Structure
 
 ```
-Frontend (React - Cloudflare Pages)
-        ↓
-Backend API (Express)
-        ↓
-Queue (BullMQ + Redis)
-        ↓
-Worker (Node.js background process)
-        ↓
-Email sent via Nodemailer
-```
-
-### Flow Explanation
-
-1. User submits contact form
-2. Backend receives request (`/api/contact`)
-3. Job is added to Redis queue
-4. Worker processes job asynchronously
-5. Email is sent via Nodemailer
-
----
-
-## 📁 Project Structure
-
-```
-MyPortfolio/
+the-soil-beneath/
 │
-├── client/                # Frontend (React + Vite)
+├── frontend/
+│   ├── public/
 │   ├── src/
+│   │   ├── api/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── pages/
+│   │   ├── hooks/
+│   │   └── assets/
 │   └── package.json
 │
-├── server/                # Backend + Queue
-│   ├── controllers/
-│   ├── routes/
-│   ├── queue/
-│   │   ├── emailQueue.js
-│   │   ├── emailWorker.js
-│   │   └── redisClient.js
-│   ├── server.js
-│   ├── .env
-│   └── package.json
+├── backend/
+│   ├── app/
+│   │   ├── api/
+│   │   ├── core/
+│   │   ├── db/
+│   │   ├── models/
+│   │   ├── schemas/
+│   │   ├── services/
+│   │   └── main.py
+│   │
+│   ├── alembic/
+│   ├── requirements.txt
+│   └── .env
 │
 └── README.md
 ```
 
 ---
 
-## ⚙️ Environment Variables
+# 🚀 Getting Started
 
-Create a `.env` file inside `/server`:
-
-```
-PORT=5000
-
-EMAIL_USER=your_email@gmail.com
-EMAIL_PASS=your_gmail_app_password
-
-REDIS_URL=rediss://default:<password>@<your-upstash-url>:6379
-```
-
-> ⚠️ Use **Gmail App Password**, not your actual Gmail password.
-
----
-
-## 🧪 Running the Project Locally
-
-### 1️⃣ Clone the repo
+## Clone the repository
 
 ```bash
-git clone <your-repo-url>
-cd MyPortfolio
+git clone https://github.com/SayaniSen2022/the-soil-beneath.git
+
+cd the-soil-beneath
 ```
 
 ---
 
-### 2️⃣ Run Backend (API)
+# Backend Setup
+
+Navigate to backend
 
 ```bash
-cd server
+cd backend
+```
+
+Create virtual environment
+
+```bash
+python -m venv .venv
+```
+
+Activate environment
+
+### Windows
+
+```bash
+.venv\Scripts\activate
+```
+
+### Linux / Mac
+
+```bash
+source .venv/bin/activate
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Run migrations
+
+```bash
+alembic upgrade head
+```
+
+Start FastAPI server
+
+```bash
+uvicorn app.main:app --reload
+```
+
+Backend runs at
+
+```
+http://127.0.0.1:8000
+```
+
+Swagger Docs
+
+```
+http://127.0.0.1:8000/docs
+```
+
+---
+
+# Frontend Setup
+
+Navigate to frontend
+
+```bash
+cd frontend
+```
+
+Install dependencies
+
+```bash
 npm install
+```
+
+Create
+
+```
+.env.development
+```
+
+```env
+VITE_API_BASE_URL=http://127.0.0.1:8000
+```
+
+Run development server
+
+```bash
 npm run dev
 ```
 
-Runs on:
-
-```
-http://localhost:5000
-```
-
----
-
-### 3️⃣ Run Worker (IMPORTANT)
-
-Open another terminal:
-
-```bash
-cd server
-node queue/emailWorker.js
-```
-
-> ⚠️ Without this, emails will NOT be sent.
-
----
-
-### 4️⃣ Run Frontend
-
-```bash
-cd client
-npm install
-npm run dev
-```
-
-Runs on:
+Frontend runs at
 
 ```
 http://localhost:5173
@@ -165,79 +215,146 @@ http://localhost:5173
 
 ---
 
-## 🔗 API Endpoint
+# Environment Variables
+
+## Frontend
+
+### Development
 
 ```
-POST /api/contact
+VITE_API_BASE_URL=http://127.0.0.1:8000
 ```
 
-### Request Body
+### Production
 
-```json
-{
-  "name": "Your Name",
-  "email": "your@email.com",
-  "message": "Your message"
-}
+```
+VITE_API_BASE_URL=https://the-soil-beneath-production.up.railway.app
 ```
 
 ---
 
-## 🌍 Deployment Notes
+## Backend
 
-### Frontend
+Example
 
-* Hosted on **Cloudflare Pages**
+```env
+DATABASE_URL=postgresql://username:password@host/database
 
-### Backend (Required)
+SECRET_KEY=your-secret-key
 
-* Must be deployed separately (Render / Railway / Fly.io)
+ALGORITHM=HS256
 
-### Worker (Critical)
-
-* Must run as a background service
-
-### Redis
-
-* Hosted on **Upstash**
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+```
 
 ---
 
-## ⚠️ Important Notes
+# API Endpoints
 
-* Cloudflare Pages **cannot run backend code**
-* Worker must always be running
-* Redis URL must be correct and active
-* Emails may go to **Spam** initially
+## Authentication
 
----
-
-## 📈 Future Improvements
-
-* Add retry mechanism for failed jobs
-* Add email templates
-* Add rate limiting
-* Add logging dashboard for queue
-* Add authentication (admin panel)
+| Method | Endpoint |
+|---------|----------|
+| POST | /api/v1/auth/signup |
+| POST | /api/v1/auth/login |
+| GET | /api/v1/auth/me |
 
 ---
 
-## 👩‍💻 Author
+## Products
+
+| Method | Endpoint |
+|---------|----------|
+| GET | /api/v1/products |
+| GET | /api/v1/products/featured |
+| GET | /api/v1/products/categories |
+| GET | /api/v1/product/{id} |
+
+---
+
+## Testimonials
+
+| Method | Endpoint |
+|---------|----------|
+| GET | /api/v1/testimonials |
+
+---
+
+# Deployment
+
+## Frontend
+
+Hosted on Cloudflare Pages.
+
+Production builds are automatically deployed from the `master` branch.
+
+Build command
+
+```bash
+npm run build
+```
+
+Output directory
+
+```
+dist
+```
+
+---
+
+## Backend
+
+Hosted on Railway.
+
+Start command
+
+```bash
+uvicorn app.main:app --host 0.0.0.0 --port $PORT
+```
+
+---
+
+# Screenshots
+
+Example: 
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/4f51c73e-3043-43d4-983c-ee8a8bf81136" />
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/fa1dc093-ed74-4631-9d47-3aabb2af7f58" />
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/4b35b989-172d-4522-8033-204a3717fd03" />
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/9e3c2df4-0e36-45d5-87c2-50c2bce1e3ee" />
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/0ac994a0-77c2-4482-9c4c-45d190563f42" />
+
+
+---
+
+# Future Enhancements
+
+- Wishlist
+- Order placement
+- Checkout flow
+- Payment Gateway Integration
+- User Profile
+- Order History
+- Admin Dashboard
+- Inventory Management
+- Product Reviews
+- Image Uploads
+- Pagination
+- Product Filters & Sorting
+
+---
+
+# Author
 
 **Sayani Sen**
-Frontend Developer | Aspiring Full Stack Developer
+
+GitHub:
+https://github.com/SayaniSen2022
+
+LinkedIn:
+https://www.linkedin.com/in/sayani-sen-535749147/
 
 ---
 
-## ⭐ Summary
+# License
 
-This project demonstrates:
-
-* Full-stack development
-* Asynchronous job processing
-* Real-world scalable architecture
-* Integration of frontend, backend, and queue systems
-
----
-
-> 🚀 Built with a focus on scalability, reliability, and real-world architecture patterns.
+This project is licensed under the MIT License.
