@@ -551,9 +551,10 @@ h1 {
   .site-footer {
     align-items: flex-start;
     gap: 1rem;
+    flex-direction: column;
   }
   .footer-actions {
-    align-items: flex-end;
+    align-items: flex-start;
     flex-direction: column;
   }
   .project {
