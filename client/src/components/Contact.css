@@ -50,13 +50,12 @@ h2 {
   border: 0;
   padding: 0;
   height: 1.5lh;
-
-  svg {
+}
+.copy svg {
     fill: var(--text-1);
     width: 3ch;
     height: 3ch;
   }
-}
 
 .referred-users {
   text-align: end;
@@ -77,11 +76,10 @@ h2 {
   display: flex;
   justify-content: flex-start;
   gap: 20px;
-
-  h2 {
+}
+.socials h2 {
     color: var(--text-3);
   }
-}
 
 .card {
   --border-width: 1px;
@@ -92,18 +90,6 @@ h2 {
   width: 50%;
 }
 
-.card::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  border-radius: inherit;
-  border: var(--border-width) solid transparent;
-  background: linear-gradient(var(--border-1), var(--border-2)) border-box;
-  mask: linear-gradient(black, black) border-box,
-    linear-gradient(black, black) padding-box;
-  mask-composite: subtract;
-}
 .user-face img{border-radius: 50%;height: 60px;width: 60px;object-fit: cover;}
 
 
@@ -119,12 +105,12 @@ h2 {
   flex: 1;
   text-align: left;
 }
-.touch-head{font-family: "Roboto", sans-serif;font-size: 5.5rem;color: #2c2c2c;
+.touch-head{font-size: 5.5rem;color: #2c2c2c;
     letter-spacing: .05em;
     text-shadow: 5px -3px 3px rgba(178,245,234,0.66);
     /* text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2); */
   }
-.contact-me p{font-family: "Roboto", sans-serif;font-size: 1.2rem;  text-shadow: .1em .1em 0 #d5d5d5;}
+.contact-me p{font-size: 1.2rem;  text-shadow: .1em .1em 0 #d5d5d5;}
 .con-right {
   width: 50%;
 }
@@ -141,18 +127,6 @@ h2 {
   backdrop-filter: blur(12px);
   border-radius: 1rem;
   box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-}
-.contact-form::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  border-radius: inherit;
-  border: 1px solid transparent;
-  background: linear-gradient(var(--border-1), var(--border-2)) border-box;
-  mask: linear-gradient(black, black) border-box,
-        linear-gradient(black, black) padding-box;
-  mask-composite: subtract;
 }
 
 .contact-form label{font-size: 15px;color: #fff;}

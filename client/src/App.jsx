@@ -1,25 +1,14 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./utilities/Layout";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Hero from "./components/Hero";
-import Error from "./components/Error";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
 import "./index.css";
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Hero />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="*" element={<Error />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Hero />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
