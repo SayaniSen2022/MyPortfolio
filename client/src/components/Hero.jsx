@@ -6,8 +6,9 @@ import { SiAnthropic, SiBootstrap, SiChakraui, SiCss3, SiExpress, SiFastapi, SiG
 import "./Hero.css";
 
 const projects = [
-  { number: "01", name: "Hypertensive.io", type: "Open-source health tracker", description: "A clear, data-led way to log blood-pressure readings and understand progress over time.", tags: ["React", "Data UI"], image: "./images/H-io.jpg", imageAlt: "Hypertensive.io application interface", url: "https://hypertensive-io.netlify.app/statistics" },
-  { number: "02", name: "Little Lemon", type: "Restaurant experience", description: "A responsive restaurant site with a thoughtful reservation journey, built for Meta’s front-end capstone.", tags: ["React", "Responsive"], image: "./images/LittleLemon.jpg", imageAlt: "Little Lemon restaurant application interface", url: "https://github.com/SayaniSen2022/Capstone" },
+  { number: "01", name: "Hypertensive.io", type: "Open-source health tracker", description: "A clear, data-led way to log blood-pressure readings and understand progress over time.", tags: ["React", "Data UI"], image: "./images/H-io.jpg", imageAlt: "Hypertensive.io application interface", url: "https://hypertensive-io.vercel.app/" },
+  { number: "02", name: "The Soil Beneath", type: "E-commerce plant store", description: "An online store to buy plants and gardening products.", tags: ["React", "Responsive", "FastAPI"], image: "./images/thesoilbeneath.webp", imageAlt: "The Soil Beneath application interface", url: "https://the-soil-beneath.pages.dev/" },
+  { number: "03", name: "Sketch-In-Sync", type: "Digital whiteboard", description: "A collaborative whiteboard application.", tags: ["React", "Typescript", "CanvasAPI"], image: "./images/sketchinsync.webp", imageAlt: "Sketch In Sync application interface", url: "https://sketch-in-sync.vercel.app/" },
 ];
 const socials = [
   { label: "GitHub", icon: FaGithub, url: "https://github.com/SayaniSen2022" },
